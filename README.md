@@ -1,6 +1,3 @@
-Perfect ✅ — since you’re working on your **Loan Default Prediction System** (Flask backend + React frontend), here’s a **detailed, professional README.md** you can include in your GitHub repo (`loan-default-app`).
-
----
 
 # 🏦 Loan Default Prediction System
 
@@ -209,6 +206,3 @@ Bachelor of Business Information Technology (BBIT) – Strathmore University
 * Build a dashboard for historical analytics.
 * Deploy on cloud (AWS / Render / Railway / GCP).
 
----
-
-Would you like me to tailor this README so it includes **screenshots and UI previews** (placeholders for you to replace later)? It’ll make your GitHub look even more polished.
