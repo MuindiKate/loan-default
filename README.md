@@ -1,86 +1,214 @@
-# Getting Started with Create React App
+Perfect ✅ — since you’re working on your **Loan Default Prediction System** (Flask backend + React frontend), here’s a **detailed, professional README.md** you can include in your GitHub repo (`loan-default-app`).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# 🏦 Loan Default Prediction System
 
-In the project directory, you can run:
+A machine learning–powered web application designed to help **SACCOs and financial institutions** assess the **risk of loan default** using **alternative data** such as M-Pesa transactions, airtime usage, and bill payment patterns.
 
-### `npm start`
+This project combines **Flask (Python)** for the backend and **React (JavaScript)** for the frontend, integrating explainable AI (XAI) techniques to improve transparency in loan approval decisions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+### 🌐 Frontend (React)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* User-friendly dashboard for loan officers to input applicant details.
+* Real-time loan risk prediction based on user input.
+* Visual display of prediction probability and risk level (e.g., Low / Medium / High Risk).
+* Clean, responsive UI (built with React + Tailwind).
+* Connection to Flask backend through RESTful APIs.
 
-### `npm run build`
+### ⚙️ Backend (Flask)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* REST API endpoints for loan prediction.
+* Pre-trained machine learning model (e.g., Random Forest / Logistic Regression).
+* Model explainability using SHAP or LIME (optional).
+* Data preprocessing pipeline for cleaning and transforming user input.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🧠 Machine Learning
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Trained using real or simulated financial data (e.g., income, savings, mobile transactions).
+* Model evaluation metrics: Accuracy, Precision, Recall, F1-score, ROC-AUC.
+* Saved model serialized using `joblib`.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧩 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+loan-default-app/
+│
+├── loan-default-backend/
+│   ├── app.py                 # Main Flask app entry point
+│   ├── model/                 # Trained ML model (.pkl or .joblib)
+│   ├── static/                # Static files (if needed)
+│   ├── templates/             # HTML templates (if Flask renders pages)
+│   ├── requirements.txt       # Python dependencies
+│   └── README.md              # Backend-specific documentation
+│
+├── loan-default-frontend/
+│   ├── src/
+│   │   ├── components/        # React components
+│   │   ├── pages/             # Application pages (e.g., Home, Results)
+│   │   ├── App.jsx            # Main React app file
+│   │   └── index.js           # Entry point
+│   ├── package.json           # Frontend dependencies and scripts
+│   └── README.md              # Frontend-specific documentation
+│
+├── venv/                      # Virtual environment (Python)
+├── .gitignore
+└── README.md                  # Main project documentation (this file)
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Installation & Setup
 
-## Learn More
+### 🔹 Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Python 3.10+
+* Node.js + npm
+* Git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🔹 Clone the Repository
 
-### Code Splitting
+```bash
+git clone https://github.com/<your-username>/loan-default-app.git
+cd loan-default-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 🧠 Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Navigate to the backend folder:
 
-### Making a Progressive Web App
+   ```bash
+   cd loan-default-backend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Create and activate a virtual environment:
 
-### Advanced Configuration
+   ```bash
+   python -m venv venv
+   source venv/Scripts/activate      # For Windows
+   # or
+   source venv/bin/activate          # For macOS/Linux
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Install dependencies:
 
-### Deployment
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Run the Flask server:
 
-### `npm run build` fails to minify
+   ```bash
+   python app.py
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   The backend will run on `http://127.0.0.1:5000`
 
+---
 
-// File: README.md
-# Loan Default Prediction Frontend
+### 💻 Frontend Setup
 
-- React SPA with pages: Home, Predict, Results (panel/modal), About, Contact.
-- Integrates with Flask backend endpoints (default `http://localhost:5000`).
-- Demo / mocked mode available.
-- Features: single predict, CSV batch predict, SHAP explanation display, Chart.js visualizations, client-side CSV/pdf report generation, local history.
+1. Open a new terminal and navigate to the frontend folder:
 
-Change backend URL: `src/api.js` -> edit `API_BASE_URL`.
+   ```bash
+   cd loan-default-frontend
+   ```
 
-Run:
-1. `npm install`
-2. `npm start`
+2. Install dependencies:
 
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend development server:
+
+   ```bash
+   npm start
+   ```
+
+   The frontend will run on `http://localhost:5173` or `http://localhost:3000` (depending on setup).
+
+4. The frontend interacts with the Flask backend via API calls (e.g., `http://127.0.0.1:5000/predict`).
+
+---
+
+## 🧪 API Endpoints
+
+| Method | Endpoint   | Description                                         |
+| ------ | ---------- | --------------------------------------------------- |
+| POST   | `/predict` | Predicts loan default risk based on input features. |
+| GET    | `/health`  | Checks backend server status.                       |
+
+**Example Request:**
+
+```json
+POST /predict
+{
+  "age": 35,
+  "income": 55000,
+  "loan_amount": 20000,
+  "mpesa_activity": 120,
+  "airtime_spend": 800,
+  "bill_payment": 5
+}
+```
+
+**Example Response:**
+
+```json
+{
+  "prediction": "High Risk",
+  "probability": 0.82
+}
+```
+
+---
+
+## 📊 Model Training
+
+You can train your own model by using the dataset and running the `train_model.ipynb` notebook (if included).
+The trained model should be saved in the `model/` directory as `model.joblib`.
+
+---
+
+## 🧰 Tech Stack
+
+**Frontend:** React, Tailwind CSS, Axios
+**Backend:** Flask, scikit-learn, pandas, numpy, joblib
+**Other Tools:** Git, VS Code, Postman
+
+---
+
+## 🧾 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👩‍💻 Author
+
+**Catherine Mutheu Muindi**
+Bachelor of Business Information Technology (BBIT) – Strathmore University
+📧 [catherine.muindi@strathmore.edu](mailto:catherine.muindi@strathmore.edu)
+🌍 [GitHub](https://github.com/<your-username>)
+
+---
+
+## 💡 Future Improvements
+
+* Integrate SHAP-based explainability for predictions.
+* Add authentication and user management.
+* Build a dashboard for historical analytics.
+* Deploy on cloud (AWS / Render / Railway / GCP).
+
+---
+
+Would you like me to tailor this README so it includes **screenshots and UI previews** (placeholders for you to replace later)? It’ll make your GitHub look even more polished.
