@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+// File: README.md
+# Loan Default Prediction Frontend
+
+- React SPA with pages: Home, Predict, Results (panel/modal), About, Contact.
+- Integrates with Flask backend endpoints (default `http://localhost:5000`).
+- Demo / mocked mode available.
+- Features: single predict, CSV batch predict, SHAP explanation display, Chart.js visualizations, client-side CSV/pdf report generation, local history.
+
+Change backend URL: `src/api.js` -> edit `API_BASE_URL`.
+
+Run:
+1. `npm install`
+2. `npm start`
+

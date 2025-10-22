@@ -1,0 +1,82 @@
+/* File: src/styles/styles.css
+   Shared styles and CSS variables for quick theming.
+   Change colors here to recolor the app.
+*/
+:root{
+  /* Color palette */
+  --primary: #0b5cff; /* blue primary */
+  --primary-600: #074bd6;
+  --secondary: #0b70ff;
+  --accent: #06b6d4;
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --danger: #ef4444;
+  --success: #10b981;
+  --surface: #f8fafc;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(11,92,255,0.07);
+  --max-width: 1100px;
+}
+
+/* Layout */
+* { box-sizing: border-box; }
+html,body,#root { height:100%; margin:0; font-family:var(--font-sans); background:var(--surface); color:#0f172a; }
+.app-container { max-width:var(--max-width); margin:20px auto; padding:16px; }
+
+/* NavBar */
+.nav {
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:linear-gradient(90deg,var(--primary),var(--primary-600));
+  color:white; padding:12px 16px; border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.nav .brand { font-weight:700; font-size:1.1rem; display:flex; gap:8px; align-items:center; }
+.nav a { color:white; text-decoration:none; margin-left:12px; font-weight:600; }
+.nav .right { display:flex; gap:12px; align-items:center; }
+
+/* Pages */
+.page {
+  background: white; padding:20px; border-radius:12px; box-shadow:var(--shadow);
+}
+
+/* Forms */
+.form-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+.input, select, textarea {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6eef9; font-size:0.95rem;
+  background:#fff;
+}
+.label { font-size:0.85rem; color:var(--muted); margin-bottom:6px; }
+.form-row { margin-bottom:12px; }
+
+.button {
+  background:var(--primary); color:white; border:none; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600;
+}
+.button.secondary { background:transparent; color:var(--primary); border:1px solid rgba(11,92,255,0.12); }
+
+.small { font-size:0.85rem; color:var(--muted); }
+.error { color:var(--danger); font-size:0.85rem; margin-top:6px; }
+
+/* Results drawer */
+.drawer {
+  position:fixed; right:20px; bottom:20px; width:360px; max-width:90%; background:white; border-radius:12px; padding:16px; box-shadow:0 16px 40px rgba(2,6,23,0.15);
+}
+.drawer .title { font-weight:700; margin-bottom:8px; }
+
+/* Responsive */
+@media (max-width:640px) {
+  .nav { flex-direction:column; align-items:flex-start; gap:8px; }
+  .app-container { padding:12px; }
+  .form-grid { grid-template-columns:1fr; }
+}
+
+/* small utility */
+.hr { height:1px; background:#f1f5f9; margin:12px 0; border-radius:2px; }
+.table { width:100%; border-collapse:collapse; }
+.table th, .table td { padding:8px; border-bottom:1px solid #f1f5f9; text-align:left; font-size:0.95rem; }
+.progress { height:8px; background:#e6eef9; border-radius:999px; overflow:hidden; }
+.progress > span { display:block; height:100%; background:var(--primary); width:0%; transition:width 300ms ease; }
